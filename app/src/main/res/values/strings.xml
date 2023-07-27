@@ -1,3 +1,14 @@
 <resources>
   <string name="app_name">TestItemTouchHelper</string>
+
+  <string name="center_pane_tab_text1">회진요약</string>
+  <string name="center_pane_tab_text2">스크랩/한줄메모</string>
+  <string name="center_pane_tab_text3">환자상세</string>
+  <string name="center_pane_tab_text4">FLOWSHEET</string>
+  <string name="center_pane_tab_text5">처방</string>
+  <string name="center_pane_tab_text6">검사결과</string>
+  <string name="center_pane_tab_text7">영상</string>
+  <string name="center_pane_tab_text8">EMR</string>
+  <string name="center_pane_tab_text9">진료메모</string>
+
 </resources>
