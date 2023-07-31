@@ -7,15 +7,17 @@
     app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/navImageView"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:scaleType="fitCenter"
             tools:src="@drawable/ic_summary"
             />
 
@@ -23,10 +25,11 @@
             android:id="@+id/navNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:gravity="center"
             tools:text="@string/center_pane_tab_text1"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
 
     </LinearLayout>
 
