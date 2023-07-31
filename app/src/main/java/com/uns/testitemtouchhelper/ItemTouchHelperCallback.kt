@@ -17,7 +17,7 @@ class ItemTouchHelperCallback(val listener: ItemTouchHelperListener) : ItemTouch
     Log.d("ItemTouchHelperCallback", "getMovementFlags called.")
 
     // 이동을 만드는 메소드
-    return makeMovementFlags(dragFlags, 0)
+    return makeMovementFlags(swipeFlags, 0)
   }
 
   // 드래그된 item을 이전 위치에서 새로운 위치로 옮길 때 호출
