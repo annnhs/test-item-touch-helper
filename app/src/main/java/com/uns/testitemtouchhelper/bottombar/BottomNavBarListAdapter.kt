@@ -1,10 +1,13 @@
 package com.uns.testitemtouchhelper.bottombar
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.uns.testitemtouchhelper.ItemTouchHelperListener
+import com.uns.testitemtouchhelper.MyApp
 import com.uns.testitemtouchhelper.databinding.BottomNavItemBinding
+import java.util.ArrayList
 
 class BottomNavBarListAdapter(val items: MutableList<BottomNavItem>) : RecyclerView.Adapter<BottomNavBarListAdapter.ViewHolder>(), ItemTouchHelperListener {
 
@@ -24,6 +27,8 @@ class BottomNavBarListAdapter(val items: MutableList<BottomNavItem>) : RecyclerV
         items.removeAt(fromPosition)
         items.add(toPosition, item)
 
+        saveBottomNavListSequence()
+
         notifyItemMoved(fromPosition, toPosition)
         return true
     }
@@ -31,6 +36,10 @@ class BottomNavBarListAdapter(val items: MutableList<BottomNavItem>) : RecyclerV
     override fun onItemSwipe(position: Int) {
         items.removeAt(position)
         notifyItemRemoved(position)
+    }
+
+    private fun saveBottomNavListSequence() {
+        MyApp.prefs.setBottomNav("InPatientBottomNav", ArrayList(items))
     }
 
     inner class ViewHolder(val binding: BottomNavItemBinding) : RecyclerView.ViewHolder(binding.root) {
